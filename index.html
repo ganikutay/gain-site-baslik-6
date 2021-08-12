@@ -1,0 +1,392 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"> <!-- EMOJI KUTUPHANE -->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+    <title>Gain Site</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.scss">-->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <style>
+    
+
+
+
+    </style>
+
+</head>
+
+<body> <!---------------------------------------------- BODY--------------------------------------------------->
+
+<div id="tumu">
+
+    <nav id="nav">
+
+    <div class="container clearfix odak" name="odak">
+     
+        <div id="logo-box"> <!--logolarin yer aldigi kutucuk, header gibi dusunebiliriz-->
+        
+            <!-- SOL LOGO-->
+            <a id="sol-logo" class="logo" style="text-decoration: none;" href="">
+                <img width="50px" src="gain logo.svg" alt="not found">
+            </a>
+            <!-- GAINCOIN FIYAT-->
+            <a id="gaincoinfiyat" class="logo" href="#"> 40.07$ </a>
+        
+            <!-- GAINCOIN YAZISI-->
+            <a id="gaincoin" class="logo" href="#">Gain Coin</a>
+        
+        
+            <!--------------BSC------------------->
+         
+            <a style="text-decoration: none;" href="https://bscscan.com" target="_blank">
+                <div id="bsc">BSC  <!--renk yazinin oldugu class veya id de degistirilebilir.-->
+                    <img id="bnb-logo" src="bnb.svg" alt="bnb logo not found">
+                    <!--<i class="fas fa-coins"></i>-->
+                </div>
+            </a>
+
+
+       
+     
+
+     <!------------ANA LOGO ve BASLIK---------------->
+        
+            <a href="#" id="anasayfa-baslik" class="logo text-uppercase">
+                <img id="anasayfa-logo" src="gain logo.svg" alt="logo not found">
+                Gain site
+            </a>
+ 
+        </div><!--logo box kapanis-->
+
+
+
+<!--TAGS ACILIR KAPANIR BUTON TOGGLE-->
+        <button id="toggle">Toggle</button> <!--Jquery ile yapildi-->
+<!-------------------TAGS------------------>
+
+    <div class="all-tags" style="display: none;"> <!-- display none css kisminda calismadi, burada yaptik. Ilk basta none yapmamin sebebi menunun sayfa acilisinda gorunmesini istememem.-->
+        
+        <div id="toggle-tradingview">
+                            <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                    {
+                    "width": "850",
+                    "height": "95",
+                    "defaultColumn": "overview",
+                    "screener_type": "crypto_mkt",
+                    "displayCurrency": "USD",
+                    "colorTheme": "dark",
+                    "locale": "uk"
+                }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+        </div>
+        
+        <!--<ul class="tags">                         NORMALDE toggle a basinca bu menu cikiyordu ama degistirip tradingview i ekledim
+            <li><a href="">Coin Oylama</a></li>
+            <li><a href="">Reklam</a></li>
+
+        </ul>
+        
+        <ul class="tags">
+
+            <li><a href="">Buy GainCoin</a></li>
+            <li><a href="">Trade </a></li>
+        </ul>
+        <br>-->
+    </div>
+
+
+
+
+
+
+
+
+    <!-------------------- WALLET VE SOSYAL MEDYA------------------->
+            
+    <div id="wallet-sosyal-medya">
+
+         <!-- SOSYAL MEDYA ICONLARI -->
+            
+            <div class="sosyal-medya">
+                <div class="twitter-icon">
+                    <a id="twitter-i" href=""><i class="fab fa-twitter"></i></a> <!-- BURADA a kismi ile renk degistiremedim, hoveri da etkileyemedim neden?(class ile, id ile degistirebildim) ustteki classlarla da degistiremedim?-->
+                </div>
+                <div class="telegram-icon">
+                    <a id="telegram-i" href=""><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+
+            <!--   WALLET CONNECT  -->
+       
+            <input id="ConnectID" type="submit" value="Connect">
+
+    </div><!--wallet ve sosyal medya bitis-->
+            <!--------------------------------------------------------------------->
+
+        
+        
+    </div>
+
+</nav>
+
+
+    
+
+
+
+
+
+<!-------------------HR HR HR HR HR-------------------->
+<hr>
+
+
+<!----------------------HEADER------------------->
+<header id="allpage">
+
+    <div class="container" name="odak">
+
+
+    <!------------ REKLAM ----------->
+        <div id="reklam">
+            <a href="#" target="_blank">
+                <img id="reklam-img" class="img-fluid" src="reklam.JPG" alt="NOT FOUND" >
+            </a>
+        </div>
+
+    <!----------- SEARCH text ------->
+        <div id="search-text">
+            <form>
+                <input id="text" type="text" style="font-family: FontAwesome;" placeholder="&#xf002 Token Name & Adress.." 
+                onfocus="FOCUS(this)" onblur="BLUR(this)">
+            </form>
+        </div>
+            
+    <!-----------------SEARCH BUTTON------------------->
+        <div id="search-button">
+            <form>  <!--action="register.aspx"           vb gibi bi siteye yonlendirmesi icin formun icine yaziyoruz-->
+                <input type="submit" id="submit" value="Search"> <!-- onceden type="submit" idi-->
+            </form>
+        </div>
+
+
+
+
+   <!---------- SAG MENU CUBUGU ------ ACILIR KAPANIR---------->
+        
+    <div class="menu-liste-div">
+        <ul>
+            <li><a id="fa-wallet" href=""><i class="fas fa-wallet"></i></a></li>
+
+            <li><a id="fa-home" href=""><i class="fas fa-home"></i></a></li>
+
+            <li><a id="fa-list-alt" href=""><i class="far fa-list-alt"></i></a></li>
+                
+            <li><a id="fa-chart-line" href=""><i class="fas fa-chart-line"></i></a></li>
+
+            <li>
+                <a id="fa-btc" href="https://www.binance.com/tr/trade/BTC_USDT?layout=pro&type=spot"><i class="fab fa-btc"></i></a>
+                <ul class="hidden">
+                    <li class="btc-alt-liste"><button type="button" onclick="javascript:btc()">BTC AL</button></li>
+                    <li class="btc-alt-liste"><button type="button" onclick="javascript:eth()">ETH AL</button></li>
+                    <li class="btc-alt-liste"><button type="button" onclick="javascript:ltc()">LTC AL</button></li>
+                </ul>
+            </li>         
+        </ul>
+    </div>
+
+
+
+<!-------------------------- TRADING VIEW ---------------------------------->
+
+
+<!-- IFRAME OLARAK ARATTIM INTERNETTE-->
+<!-- TradingView Widget BEGIN -->
+<div id="grafik" style="width: 20px;">
+
+<div class="tradingview-widget-container">
+    <div id="tradingview_79a5b"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget
+    (
+    {
+        "width": 800,/*980*/
+        "height": 430,/*610*/
+        "symbol": "BINANCE:BTCUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "tr",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_79a5b" // BU ID ILE ALTTAKI ID NIN TUTMASI GEREKLI!!!!!!!!!!!!!!!
+    }
+    );
+    </script>
+</div>
+</div>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<!-- TradingView Widget END -->
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</header>
+
+
+</div> <!-- en ustteki div(tumu)-->
+<!--************************************** SCRIPT **********************************-->
+
+<script> 
+
+        var p3 = document.querySelector("#p3");
+        var p2 = document.querySelector("#p2");
+        var p1 = document.querySelector("#p1");
+
+var x;
+
+    //  JQuery ile yapildi
+    $(document).ready(function(){
+        $("#toggle").click(function(){   // toggle tusu ile menuyu gizleyip gosterebiliyoruz   
+            $(".all-tags").fadeToggle("slow"); // bunu basta display:none; yaptik. yani bu gorunur olurken asagidaki gizleniyo
+            $("#bsc").fadeToggle("slow");
+            $("#sol-logo").fadeToggle("slow");
+            $("#gaincoinfiyat").fadeToggle("slow");
+            $("#gaincoin").fadeToggle("slow");
+            $("#anasayfa-baslik").fadeToggle("slow");   // bu gizlenirkende yukaridaki gorunur oluyor 
+        });  
+    });
+  
+    //   JS ile yapildi
+    function FOCUS(/*obj*/){ //ODAKLANMA
+        //document.getElementsByName('kon')[0].style.backgroundColor="rgb(34, 52, 69)"; //name,class dizi mantigiyla calistigi icin [] koymalisi
+        //document.getElementsByName('kon')[0].style.transition="0.6s";
+        document.getElementById('allpage').style.backgroundColor="rgb(34, 52, 69)";
+        document.getElementById('allpage').style.transition="0.6s";
+        document.getElementById('nav').style.backgroundColor="rgb(24, 42, 59)";
+        document.getElementById('nav').style.transition="0.6s";
+        //obj.style.backgroundColor="red";
+        // CLASS OLUNCA CALISMIYOR !!!!  document.getElementsByClassName('container').style.backgroundColor="red";
+    }
+    function BLUR(){ //ODAKLANMA IPTAL EDILINCE
+        document.getElementById('allpage').style.backgroundColor="#3B5268";
+        document.getElementById('allpage').style.transition="0.6s";
+        document.getElementById('nav').style.backgroundColor="rgb(44, 62, 79)";
+        document.getElementById('nav').style.transition="0.6s";
+
+    }
+
+
+    function btc(){    
+
+        new TradingView.widget(
+        {
+        "width": 800,
+        "height": 430,
+        "symbol": "BINANCE:BTCUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "tr",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_79a5b"  // BU ID ILE USTTEKI ID NIN TUTMASI GEREKLI!!!!!!!!!!!!!!!
+        }
+        );
+        
+    } 
+
+    function eth(){ 
+
+        new TradingView.widget(
+        {
+        "width": 800,
+        "height": 430,
+        "symbol": "BINANCE:ETHUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "tr",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_79a5b"  // BU ID ILE USTTEKI ID NIN TUTMASI GEREKLI!!!!!!!!!!!!!!!
+        }
+        );
+
+    }
+
+    function ltc(){
+
+        new TradingView.widget(
+        {
+        "width": 800,
+        "height": 430,
+        "symbol": "BINANCE:LTCUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "tr",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_79a5b"  // BU ID ILE USTTEKI ID NIN TUTMASI GEREKLI!!!!!!!!!!!!!!!
+        }
+        );
+
+    }
+
+</script>
+
+
+<script src="script.js "></script>
+<!--POOCOIN STRING LERINI NASIL KULLANABILIRIM-->
+<!--    <string src="https://poocoin.app/charts/datafeeds/udf/dist/bundle.js"></string>
+    <string src="https://poocoin.app/charts/datafeeds/udf/dist/polyfills.js"></string>
+    <string src="https://poocoin.app/charts/charting_library/charting_library.js"></string>    -->
+</body>
+
+</html>
+
+
+
+

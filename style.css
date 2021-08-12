@@ -1,0 +1,824 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.5;
+	background-color: rgb(83, 83, 83);
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+	width: 1140px; /* Container imizin genisligini verdik */
+    /*height: auto;*/
+	margin-left: auto; /* sagdan ve soldan ortalamak icin kullaniyoruz, ustte 1140px demistik, macbookta full ekran 1440px. Buna gore yaziya border-color vererek gore bilirsin, nasil ortalandigini..*/
+	margin-right: auto;
+	padding-left: .5rem;
+	padding-right: .5rem;
+    /*border: 1px solid rgb(0, 255, 170);*/
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+/*navbar*/
+
+nav {
+	font-family: Montserrat;
+	background-color: #2C3E50;
+	color: #F9FAFB;
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+    /*border: 1px solid red;*/
+}
+
+#logo-box {
+	color: #F9FAFB;
+	font-weight: 700;
+	font-size: 3.2rem;
+    /*border: 1px solid red;*/
+    display: inline-block;
+}
+
+.logo{
+    font-weight: 700;
+	font-size: 3.2rem;
+    display: inline-block;
+}
+
+/*----------- ANASAYFA LOGO VE BASLIK-------------------*/
+#anasayfa-logo{
+    
+    width: 60px;
+    filter:invert(100%); /* Renkleri tersine cevirme. svg leri color ile degistiremedim??*/
+    margin-left: 4rem;
+}
+
+#anasayfa-baslik{
+    color: #F9FAFB;
+}
+
+
+
+/*----------------- SOLDAKI KUCUK LOGO  ------------*/
+#sol-logo{
+    /*background-image: url('gain-logo.png');*/
+    width: 5rem;
+    height: 6rem;
+    
+    margin-left: 0;
+    display: inline-block;
+
+    position: relative;
+    top: .5rem;
+    left: .5rem;
+    
+    transition: 0.6s;
+}
+
+/* logo HOVER */
+#sol-logo:hover{
+    /*background-image: url('gain-logo-tersi.png');
+    width: "35px";
+    margin-left: 40px;
+    position: absolute;
+    top: 40px;*/
+    filter:invert(100%); /* Renkleri tersine cevirme */
+    transition: 0.6s;
+}
+
+
+
+
+
+/* gaincoinfiyat NORMAL */
+#gaincoinfiyat{
+    color: green;
+    
+    /*height: 5rem;*/
+    padding: .5rem 0;
+    
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    /*margin-left: 1.5rem;*/ 
+    display: inline-block;
+
+    border-left: 0.2rem solid #535353;
+    border-radius: 0.1rem;
+    padding-left: 0.5rem;
+    transition: 0.6s;
+    position: relative;
+    top: -.8rem;
+    
+}
+
+/* gaincoinfiyat HOVER */
+#gaincoinfiyat:hover{
+    color: #F9FAFB;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    /*margin-left: 1.5rem;*/
+    transition: 0.6s;
+}
+
+
+
+
+
+
+/* gaincoin NORMAL */
+#gaincoin{
+    color: black;
+    font-weight: 900;
+    font-size: 1.8rem;
+
+    text-decoration: none;
+    margin-left: .1rem; 
+    
+    border-right: .2rem solid #535353;
+    border-radius: .1rem;
+    display: inline-block;
+
+    /*background-color: violet;*/
+    width: 5rem;
+    height: 4rem;
+    transition: 0.6s;
+
+    line-height:1.8rem;
+}
+
+/* gaincoin HOVER */
+#gaincoin:hover{
+    color: #F9FAFB;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-left: .1rem; 
+
+    transition: 0.6s;
+}
+
+
+#bsc{
+    /*color: black;*/
+    /*background-color: violet;*/
+    
+    clear: both;
+    color: rgb(245, 188, 3) ;/* !importent koyuldugunda hover verilmiyor ,calismiyor*/
+    font-weight: 700;
+    font-size: 3rem;
+    text-decoration: none;
+    margin-left: .5rem; 
+    display: inline-block;
+
+
+    width: 11rem;
+    transition: 0.6s; /* SADECE HOVER A DEGIL BURAYADA EKLEMELIYIZ!!!!!!*/
+}
+
+#bsc:hover{
+    transition: 0.6s; /* normal yazilarda box-shadow yazmiyoruz!!!!!!*/
+    color: rgb(132, 0, 255);
+}
+
+#bnb-logo{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: .3rem;
+}
+
+
+
+/*------------ TOGGLE ------------*/
+
+#toggle{
+    font-size: 1.6rem;
+    width: 6rem;
+    background-color: transparent;
+    color: #F9FAFB;
+    border: 1px solid #F9FAFB;
+    border-radius: .4rem;
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+    margin-left: 1rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+#toggle:hover{
+    color: #3B5268;
+	background-color: #F9FAFB;
+    cursor: pointer;
+    /*color: rgb(49, 133, 182);*/
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+    box-shadow: 0 1rem 2rem .2rem rgba(255, 255, 255, 0.1) ,1rem 0 2rem .2rem rgba(255, 255, 255, 0.1), 0 -1rem 2rem -.2rem rgba(255, 255, 255, 0.1), -1rem 0 2rem -.2rem rgba(255, 255, 255, 0.1); 
+
+}
+/*------------ TAGS ------------*/
+
+.all-tags{
+    /*background-color: rgb(229, 211, 151);*/
+    border-radius: .4rem;
+    width: 25rem;
+    height: 6rem;
+    margin-left: 3rem;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+}
+
+.tags{                /* toplu olarak hareketlerini ayarlayabiliriz*/
+    
+    margin: 0;
+    margin-right: 0;
+    padding: 0;
+    margin-top: 0;
+          
+} 
+
+.tags li{
+    list-style: none;
+    display: inline;
+    margin-right: 0;
+    margin-left: 1.5rem;
+    margin-top: 0;
+    
+}
+
+.tags li a{           /* teker teker a larin marginlerini vb ayarlayabiliriz*/
+    color: rgb(13, 13, 156);
+    font-weight: 800;
+    font-size: 1.6rem;
+    text-decoration: none;
+    margin-right: 0;
+    
+    transition: 0.6s;
+}
+
+.tags li a:hover{
+    color: rgb(132, 0, 255);
+    font-weight: 800;
+    font-size: 1.6rem;
+    text-decoration: none;
+    
+    transition: 0.6s;
+}
+
+
+
+
+/*---------------   toggle-tradingview   ---------------*/
+
+#toggle-tradingview{
+    position: relative;
+    bottom: 4rem;
+
+}
+
+
+
+
+
+
+/*------------------ WALLET CONNECT ---------------------*/
+
+#wallet-sosyal-medya{
+    width: 8rem;
+    height: 8rem;
+    float: right;
+    /*margin-top: 1rem;
+    margin-right: 1rem;
+    */
+    /*border: 1px solid salmon;*/
+}
+
+
+/* Connect butonumuzu ayarliyoruz*/
+#ConnectID{
+    margin: 0.5rem 0 0 0;
+    width: 8rem;
+    height: 3rem;
+    float: right; /*butonu sayfanin sag tarafina yolladik*/
+        
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #F9FAFB;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    /*margin: 7px 0;*/
+    /*margin-top: 2rem;
+    margin-right: 3%; /*sagdan % 8 uzaklastirdim.Sayfa buyusede kuculsede*/
+    border:.1rem solid #F9FAFB;
+    border-radius: .4rem;
+    cursor: pointer;
+    
+    /*display: inline-block;*/
+    transition: 0.6s;
+    transition: box-shadow 0.6s;
+    transition: all 0.6s; /* all dedigimizde background da yavas gecis yapmaya basladi!!!!!*/
+    /*position: relative;
+    top: 5rem;*/
+    }
+    
+    
+/* Connect butonuna hover olayı gerçekleştirğinde arkaplan rengini degistiriyoruz */
+#ConnectID:hover{
+    background-color: #F9FAFB;
+    color: #2C3E4F;
+    
+    width: 8rem;
+    font-size: 1.5rem;
+    /*transition-timing-function: ease;     pek bi ise yaramadi*/
+    
+    /*box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.1) ,10px 0px 20px 2px rgba(0,0,0,0.1), 0px -10px 20px -2px rgba(0,0,0,0.1), -10px 0px 20px -2px rgba(0,0,0,0.1); 
+    */
+    box-shadow: 0 1rem 2rem .2rem rgba(255, 255, 255, 0.1) ,1rem 0 2rem .2rem rgba(255, 255, 255, 0.1), 0 -1rem 2rem -.2rem rgba(255, 255, 255, 0.1), -1rem 0 2rem -.2rem rgba(255, 255, 255, 0.1); 
+    transition: 0.6s;
+    transition: box-shadow 0.6s;
+    transition: all 0.6s; /* all dedigimizde background da yavas gecis yapmaya basladi!!!!!*/
+    }
+
+
+
+
+
+
+
+
+
+/*------------SOSYAL MEDYA----------------------*/
+
+.sosyal-medya{
+    float: right;
+    /*margin-right: 3%;*/
+    text-decoration: none;
+    font-size: 2.7rem;  
+}
+
+.twitter-icon{
+margin: 0 .5rem;
+display: inline-block;
+}
+
+.telegram-icon{
+    margin: 0 .5rem;
+    display: inline-block;
+}
+
+#twitter-i{
+    color: rgb(41, 187, 255);
+    transition: 0.6s;
+
+}
+
+#telegram-i{
+    color: rgb(41, 187, 255);
+    transition: 0.6s;
+
+}
+
+#twitter-i:hover{
+    color: #F9FAFB;
+    transition: 0.6s;
+
+}
+
+#telegram-i:hover{
+    color: #F9FAFB;
+    transition: 0.6s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------HR-----------------------------------------------------------*/
+hr{
+ width: 100%;
+    /*border-color: rgb(204, 203, 203);*//*renk bu sekilde degisiyor*/
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------HEADER----------------*/
+
+header{
+    background-color: #3b5268;
+    height: 80rem;
+    /*padding-top: calc(100px + 10.15rem);*/
+    padding-top: 2rem;
+}
+
+
+/* -------------- REKLAM ------------------*/
+
+#reklam{
+    /*margin-top: 1rem;
+    margin-left: 2rem;*/
+
+    float: left;
+    /*border: 1px solid rgb(0, 81, 255);*/
+}
+
+#reklam-img{
+    height: 12rem;
+    width: 80rem;
+    /*border: 1px solid rgb(255, 0, 255);*/
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/*------------------ SEARCH TEXT -----------*/
+::placeholder{
+    color: rgb(90, 90, 90);
+    opacity: .8; /* chrome,safari,opera,firefox */
+    font-family: FontAwesome;
+  }
+
+input[type="text"]{ 
+    margin-top: 0;
+    margin-right:.5rem;
+    margin-left: .5rem;
+    cursor: text;
+    
+    width: 31rem;
+    height: 5rem;
+    border: .1rem solid #3B5268;
+    
+    border-radius: .4rem;
+    padding: .8rem 5rem;/* yazinin ust alt ve sag sol padding i*/
+    background-color: #93b4d3;
+    background-image: url(search-solid.svg);
+    /*background-image in boyutunu ve rengini nasil degistiricem???*/
+    background-repeat: no-repeat;
+    
+    /*background-position: 5px 5px;*/
+}
+
+
+input[type="text"]:focus{
+    outline: 0;
+    border-color: #3B5268;
+    border-width: .25rem;
+    background-color: #caddf0;
+    
+}
+
+
+#text{
+    float: right;
+	letter-spacing: .1rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+/*------------------ SEARCH BUTON ---------------*/
+
+/*SEARCH butonumuzu ayarliyoruz*/
+input[type="submit"]{
+	width: 31rem;
+    height: 5rem;
+    background-color: transparent;
+    color: #F9FAFB;
+    border: 1px solid #F9FAFB;
+    border-radius: .4rem;
+    padding: 1.2rem 1.8rem;
+    margin: 1.7rem .5rem 0 .5rem;
+    
+    
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+}
+
+/*searchbutonuna hover olayı gerçekleştirğinde arkaplan rengini degistiriyoruz */
+input[type="submit"]:hover{
+    color: #3B5268;
+	background-color: #F9FAFB;
+    
+    /*color: rgb(49, 133, 182);*/
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+    box-shadow: 0 1rem 2rem .2rem rgba(255, 255, 255, 0.1) ,1rem 0 2rem .2rem rgba(255, 255, 255, 0.1), 0 -1rem 2rem -.2rem rgba(255, 255, 255, 0.1), -1rem 0 2rem -.2rem rgba(255, 255, 255, 0.1); 
+
+}
+
+/* Search'e ait elemanlarin harf aralığını arttır ve harfleri kalinlastirir */
+#submit{
+    float: right;
+	letter-spacing: .4rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- SAG MENU ACILIR KAPANIR ------------*/
+
+.menu-liste-div{
+    float: right;
+    width: 8rem;
+    height: 37rem;
+    /*margin-right: 2rem;*/
+}
+
+header .container ul{
+    width: 8rem;
+    height: 37rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    /*float: right;*/
+    /*border: 1rem solid salmon;*/
+}
+
+header .container ul li{
+    /*margin: 25px 0;*/
+    margin-bottom: 2.5rem;
+    list-style: none;
+}
+
+header .container ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+
+    transition: 0.6s;  
+}
+
+header .container ul li button{  /*sonradan ekledim bu kismi*/
+    text-decoration: none;
+    color: whitesmoke;
+
+    transition: 0.6s;  
+}
+/*
+.nav .container ul li a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+    
+    transition: 0.6s;
+}
+*/
+#fa-wallet:hover{   /* CUZDAN ICON */
+    text-decoration: none;
+    color: rgb(7, 209, 34);
+    
+    transition: 0.4s;
+}
+
+#fa-home:hover{     /* HOME ICON */   
+    text-decoration: none;
+    color: black;
+    
+    transition: 0.4s;
+}
+
+#fa-list-alt:hover{    /* LISTE ICON */
+    text-decoration: none;
+    color: black;
+    
+    transition: 0.4s;
+}
+
+#fa-chart-line:hover{   /* YUKSELEN GRAFIK ICON */
+    text-decoration: none;
+    color: rgb(7, 209, 34);
+    
+    transition: 0.4s;
+}
+
+#fa-btc:hover{          /* BTC ICON */
+    text-decoration: none;
+    color: rgb(245, 188, 3);
+    
+    transition: 0.4s;
+}
+
+header .container ul li a i{
+    
+    font-size: 4.5rem;
+    font-weight: 800;
+    
+    
+}
+
+header .container ul li ul li{ /*ul ul li idi*/
+    font-size: 2.2rem;
+    font-weight: 800;
+    
+    position: relative;
+    top: -4rem;
+    right: 16rem;
+    /*background-color: whitesmoke;*/
+    text-align: center;
+    margin: 0;
+
+    
+}
+
+header .container ul ul:hover li button{
+    background-color: transparent;
+    color: #F9FAFB;
+    border: 1px solid #F9FAFB;
+    border-radius: .4rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+
+    
+} 
+
+header .container ul ul li:hover button{
+    color: #3B5268;
+	background-color: #F9FAFB;
+    
+    /*color: rgb(49, 133, 182);*/
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+    box-shadow: 0 1rem 2rem .2rem rgba(255, 255, 255, 0.1) ,1rem 0 2rem .2rem rgba(255, 255, 255, 0.1), 0 -1rem 2rem -.2rem rgba(255, 255, 255, 0.1), -1rem 0 2rem -.2rem rgba(255, 255, 255, 0.1); 
+
+
+} 
+
+li:hover ul button{
+   
+    background-color: transparent;
+    color: #F9FAFB;
+    border: 0.1rem solid #F9FAFB;
+    border-radius: .4rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.6s;
+    transition: box-shadow 0.6s;
+    
+
+}
+
+ul li ul{ /*displayi kapadik, asagida acicaz*/
+    display: none;
+}
+
+ul li a:hover+ .hidden,.hidden:hover{ /* + hidden yaparak fark yaratiriz. hidden class indan onceki ilk a etiketi demek istiyoruz. Ancak hemen menu kapaniyor o yuzden virgul koyup hidden olayinda da hover olmasini istiyoruz ve belirtiyoruz*/
+   display: block;
+   height: 0;  /*SALMON RENGI BORDER CIKIYODU UZUN ONU YOK ETMEK ICIN YAZDIM*/
+    /*float: left;*/
+    position: relative;
+    bottom: 10rem;
+    left: 4rem;
+}
+
+ul li ul li{
+    /*margin-bottom: 2rem;*/
+    padding: 0;
+    width: 11rem;
+    height: 6.5rem;
+    /*background-color: yellow;*/
+
+}
+
+ul li ul li button{
+    width: 6rem;
+    height: 5rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- TRAIDING VIEW --------------------*/
+.tradingview-widget-container{
+    float: left;
+    margin: 0.5rem 0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) {
+	
+	.container {
+		max-width: 540px;
+	}
+	
+}
+
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;	
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
